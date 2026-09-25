@@ -1,0 +1,16 @@
+<header class="header" id="top">
+    <div class="container header__inner">
+        <a href="{% url 'pages:home' %}" class="logo">
+            <span class="logo__mark">◆</span>
+            <span class="logo__text">{% if company %}{{ company.company_name }}{% else %}AUREUM<span>MOTORS</span>{% endif %}</span>
+        </a>
+        <nav class="nav" id="nav" aria-label="Основная навигация">
+            <a href="{% url 'pages:home' %}" class="nav__link">Главная</a>
+            <a href="{% url 'pages:about' %}" class="nav__link">О проекте</a>
+            <a href="{% url 'pages:services' %}" class="nav__link">Услуги</a>
+            <a href="{% url 'pages:contacts' %}" class="nav__link">Контакты</a>
+            <a href="{% url 'pages:services' %}#order" class="nav__link nav__link--btn">Оставить заявку</a>
+        </nav>
+        <button class="burger" id="burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+</header>

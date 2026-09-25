@@ -1,0 +1,8 @@
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__col"><a href="{% url 'pages:home' %}" class="logo"><span class="logo__mark">◆</span><span class="logo__text">{% if company %}{{ company.company_name }}{% else %}AUREUM<span>MOTORS</span>{% endif %}</span></a><p class="footer__desc">Премиальный автосалон. Эксклюзивные автомобили, прозрачные сделки, сервис мирового уровня.</p></div>
+        <div class="footer__col"><h4 class="footer__title">Навигация</h4><a href="{% url 'pages:home' %}#models">Модели</a><a href="{% url 'pages:services' %}">Каталог</a><a href="{% url 'pages:about' %}">О салоне</a><a href="{% url 'pages:contacts' %}">Контакты</a></div>
+        <div class="footer__col"><h4 class="footer__title">Контакты</h4>{% if company %}<a href="tel:{{ company.phone }}">{{ company.phone }}</a><a href="mailto:{{ company.email }}">{{ company.email }}</a><p>{{ company.address }}</p>{% endif %}</div>
+    </div>
+    <div class="container footer__bottom"><span>© {% now "Y" %} {% if company %}{{ company.company_name }}{% else %}AUREUM Motors{% endif %}. Все права защищены.</span><span>Сделано с заботой о деталях</span></div>
+</footer>

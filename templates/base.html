@@ -1,0 +1,20 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}AUREUM Motors — Премиальный автосалон{% endblock %}</title>
+    <meta name="description" content="AUREUM Motors — премиальный автосалон в Бишкеке">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <main>{% block content %}{% endblock %}</main>
+    {% include 'footer.html' %}
+    <script src="{% static 'js/site.js' %}"></script>
+</body>
+</html>

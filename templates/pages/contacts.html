@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}Контакты — AUREUM Motors{% endblock %}
+{% block content %}
+<section class="pagehead"><div class="container"><span class="badge">Мы всегда на связи</span><h1 class="pagehead__title">Контакты</h1><p class="pagehead__sub">Приезжайте в шоурум или оставьте заявку онлайн — подберём автомобиль под вашу задачу.</p></div></section>
+<section class="section section--alt"><div class="container contact-layout"><div class="contact-info"><span class="section__label">Контактные данные</span>{% if company %}<a class="contact-item" href="tel:{{ company.phone }}"><small>Телефон</small><strong>{{ company.phone }}</strong></a><a class="contact-item" href="mailto:{{ company.email }}"><small>Email</small><strong>{{ company.email }}</strong></a><div class="contact-item"><small>Адрес</small><strong>{{ company.address }}</strong></div>{% endif %}<a href="{% url 'pages:services' %}#order" class="btn btn--primary">Оставить заявку</a></div><div class="contact-map"><span class="contact-map__pin">◆</span><span>Бишкек<br>пр. Чуй, 158</span></div></div></section>
+{% endblock %}
